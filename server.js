@@ -1,9 +1,11 @@
 const express = require('express')
 require('dotenv').config()
 const mongoose = require('mongoose')
-const Messages = require('./models/Message')
 const db = mongoose.connection
-const messageData = require('./utilities/data')
+const Messages = require('./models/Message')
+const Comments = require('./models/Comment')
+const messageSeedData = require('./utilities/messageSeedData')
+const commentSeedData = require('./utilities/commentSeedData')
 const cors = require('cors')
 
 //Environment Variables
@@ -34,13 +36,18 @@ app.use(cors({ origin: '*' }));
 // Routes
 
 const messagesController = require('./controllers/messagesController.js');
+const commentsController = require('./controllers/commentsController.js');
 
 app.use('/messages', messagesController);
+app.use('/comments', commentsController);
+
 
 // Seeding the db
 app.get('/seed', async (req, res) => {
     await Messages.deleteMany({});
-    await Messages.insertMany(messageData);
+    await Messages.insertMany(messageSeedData);
+    await Comments.deleteMany({});
+    await Comments.insertMany(commentSeedData);
     res.send('done!');
   });
 
