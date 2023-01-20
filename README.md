@@ -222,7 +222,7 @@ I am not affliated with any of the above and all work used is for educational an
 
 ## Author
 
-- Gary Newton - [GitHub Profile](https://github.com/glnewton)
+- Gary Newton - [GitHub Profile](https://github.com/glnewton) [LinkedIn Profile](https://www.linkedin.com/in/gary-newton-developer/)
 
 ## License
 
