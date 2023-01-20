@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
-import Comment from './Comment.js';
-
 
 const messageSchema = new mongoose.Schema({
     userName: String,
@@ -9,7 +7,7 @@ const messageSchema = new mongoose.Schema({
     message: String,
     likes: Number,
     createdDate: String,
-    comments: [Comment]
+    comments: Number
 });
 
 const Message = mongoose.model('Message', messageSchema);

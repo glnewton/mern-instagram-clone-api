@@ -31,7 +31,9 @@ app.use(express.urlencoded({ extended: false }))// extended: false - does not al
 app.use(express.json()); //use .json(), not .urlencoded()
 app.use(express.static('public')) // we need to tell express to use the public directory for static files... this way our app will find index.html as the route of the application! We can then attach React to that file!
 //app.use(cors())
-app.use(cors({ origin: '*' }));
+// app.use(cors({ origin: '*' }));
+app.use(cors({ origin: 'http://localhost:3000' }));
+
 
 // Routes
 
