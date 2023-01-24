@@ -30,11 +30,9 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 app.use(express.urlencoded({ extended: false }))// extended: false - does not allow nested objects in query strings
 app.use(express.json()); //use .json(), not .urlencoded()
 app.use(express.static('public')) // we need to tell express to use the public directory for static files... this way our app will find index.html as the route of the application! We can then attach React to that file!
-//app.use(cors())
-// app.use(cors({ origin: '*' }));
+
 app.use(cors({ 
   origin: ['http://localhost:3000',  'https://mern-instagram-clone-ui.onrender.com']}));
-
 
 // Routes
 
@@ -43,7 +41,6 @@ const commentsController = require('./controllers/commentsController.js');
 
 app.use('/messages', messagesController);
 app.use('/comments', commentsController);
-
 
 // Seeding the db
 app.get('/seed', async (req, res) => {
@@ -57,6 +54,3 @@ app.get('/seed', async (req, res) => {
 app.listen(PORT, () => {
     console.log('Server active on port: ', PORT)
   })
-
-
-  
