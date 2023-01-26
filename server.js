@@ -5,7 +5,6 @@ const db = mongoose.connection
 const Messages = require('./models/Message')
 const Comments = require('./models/Comment')
 const messageSeedData = require('./utilities/messageSeedData')
-const commentSeedData = require('./utilities/commentSeedData')
 const cors = require('cors')
 
 //Environment Variables
