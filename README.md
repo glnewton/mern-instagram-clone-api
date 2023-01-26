@@ -22,8 +22,8 @@ Elements of both functional programming and object-oriented programming are used
 
 ## Technologies, Languages, Libraries & Platforms Used
 
-- NodeJS
-- ExpressJS
+- Node.js (Runtime Environment)
+- ExpressJS (Web Framework)
 - MongoDB (Cloud NoSQL Database)
 - Mongoose (ORM)
 - Render (Cloud PaaS Platform)
@@ -34,7 +34,6 @@ Elements of both functional programming and object-oriented programming are used
 2. It uses the Mongoose library to interact with MongoDB.
 3. It includes routes for getting, creating, updating, and deleting messages and comments.
 4. The API uses CORS to allow the front-end to access the API.
-
 
 ### Files & Directories 
 
@@ -76,7 +75,7 @@ Elements of both functional programming and object-oriented programming are used
 
 ##### Sample Message Document
 
-```
+```js
 {
     "userName": "glnewton",
     "userProfileImage": "https://avatars.githubusercontent.com/u/69450874?v=4",
@@ -88,7 +87,7 @@ Elements of both functional programming and object-oriented programming are used
  }
 ```
 
-### Comment  
+### Comment 
      messageId: String  
      userName: String  
      userProfileImage: String  
@@ -97,7 +96,7 @@ Elements of both functional programming and object-oriented programming are used
 
 #### Sample Comment Document  
 
-```
+```js
  {
      "messageId": "60e3b6b9b9b9b9b9b9b9b9b9",
      "userName": "glnewton",
