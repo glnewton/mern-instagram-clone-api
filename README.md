@@ -38,50 +38,45 @@ Elements of both functional programming and object-oriented programming are used
 
 ### Files & Directories (***UPDATE ME***)
 
-- server.js - the main file for the express app, where the express app is created and the middleware and routes are set up.
-- package.json - lists the packages (including express) that the project depends on, as well as scripts for running the app and testing.
-- package-lock.json - records the exact versions of package dependencies that were installed.
-- README.md - a file containing information about the project, including instructions for how to set it up and use it. This file is often displayed on the project's homepage on GitHub.
-- controllers/ - contains the route handlers for the app, which define the behavior for each URL endpoint
-- models/ - This directory contain files for setting up the database schema and defining models for interacting with the data in MongoDB via Mongoose
-- docs/ - contains documentation files for the project, iscreenshots, requirements and other files used by the developer such as an API reference or user guide.
-- utilities/ - contains utility files for the project, files to seed the database, or other files used by the developer.
+- server.js - the main file for the express app, where the express app is created and the middleware and routes are set up.  
+- package.json - lists the packages (including express) that the project depends on, as well as scripts for running the app and testing.  
+- package-lock.json - records the exact versions of package dependencies that were installed.  
+- README.md - a file containing information about the project, including instructions for how to set it up and use it. This file is often displayed on the project's homepage on GitHub.  
+- controllers/ - contains the route handlers for the app, which define the behavior for each URL endpoint.  
+- models/ - This directory contain files for setting up the database schema and defining models for interacting with the data in MongoDB via Mongoose.  
+- docs/ - contains documentation files for the project, iscreenshots, requirements and other files used by the developer such as an API reference or user guide.  
+- utilities/ - contains utility files for the project, files to seed the database, or other files used by the developer.  
 
 ## Endpoints (***UPDATE ME***)
 
-Messages
-    GET /messages: Get all messages
-    POST /messages: Create a new message
-    GET /messages/:id: Get a specific message by id
-    PUT /messages/:id: Update a specific message by id
-    DELETE /messages/:id: Delete a specific message by id
+Messages  
+    GET /messages: Get all messages  
+    POST /messages: Create a new message  
+    GET /messages/:id: Get a specific message by id  
+    PUT /messages/:id: Update a specific message by id  
+    DELETE /messages/:id: Delete a specific message by id  
 
-Comments
-    GET /comments: Get all comments
-    POST /comments: Create a new comment
-    GET /comments/:id: Get a specific comment by id
-    PUT /comments/:id: Update a specific comment by id
-    DELETE /comments/:id: Delete a specific comment by id                                             
+Comments  
+    GET /comments: Get all comments  
+    POST /comments: Create a new comment  
+    GET /comments/:id: Get a specific comment by id  
+    PUT /comments/:id: Update a specific comment by id  
+    DELETE /comments/:id: Delete a specific comment by id  
 
 ## Data Models
 
- Message
-     userName: String
-     userProfileImage: String
-     imageUrl: String
-     message: String
-     likes: Number
-     createdDate: String
-     comments: Number
+### Message  
+     userName: String  
+     userProfileImage: String  
+     imageUrl: String  
+     message: String  
+     likes: Number  
+     createdDate: String  
+     comments: Number  
 
- Comment
-     messageId: String
-     userName: String
-     userProfileImage: String
-     text: String
-     createdDate: String
+##### Sample Message Document
 
-Sample Message Document
+```
 {
     "userName": "glnewton",
     "userProfileImage": "https://avatars.githubusercontent.com/u/69450874?v=4",
@@ -91,8 +86,17 @@ Sample Message Document
      "createdDate": "2021-04-01T00:00:00.000Z",
      "comments": 0
  }
+```
+### Comment  
+     messageId: String  
+     userName: String  
+     userProfileImage: String  
+     text: String  
+     createdDate: String  
 
-Sample Comment Document
+#### Sample Comment Document  
+
+```
  {
      "messageId": "60e3b6b9b9b9b9b9b9b9b9b9",
      "userName": "glnewton",
@@ -100,12 +104,13 @@ Sample Comment Document
      "text": "This is a test comment",
      "createdDate": "2021-04-01T00:00:00.000Z"
  }
+```
 
-## Installation Instructions (***UPDATE ME***)
+## Installation Instructions
 
-**Step 1: Clone the repository**
+**Step 1: Clone the repository**  
 
-Run the following code in your terminal to download the code:
+Run the following code in your terminal to download the code:  
 
 `git clone https://github.com/glnewton/mern-instagram-clone-api.git`
 
