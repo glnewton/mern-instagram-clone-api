@@ -16,6 +16,10 @@ This is the back-end API for a MERN stack Instagram Clone. It uses Node with Exp
 
 This project is a hosted and deployed via Render. Render monitors this repository and will redploy on new commits.
 
+### Render Dashboard
+
+![Render Dashboard](./docs/renderDashboard.jpg)
+
 ## Code Style
 
 Elements of both functional programming and object-oriented programming are used in this project.
@@ -39,6 +43,7 @@ Elements of both functional programming and object-oriented programming are used
 
 ![File Structure](./docs/fileStructure.jpg)
 
+```txt
 - server.js - the main file for the express app, where the express app is created and the middleware and routes are set up.  
 - package.json - lists the packages (including express) that the project depends on, as well as scripts for running the app and testing.  
 - package-lock.json - records the exact versions of package dependencies that were installed.  
@@ -47,26 +52,34 @@ Elements of both functional programming and object-oriented programming are used
 - models/ - This directory contain files for setting up the database schema and defining models for interacting with the data in MongoDB via Mongoose.  
 - docs/ - contains documentation files for the project, iscreenshots, requirements and other files used by the developer such as an API reference or user guide.  
 - utilities/ - contains utility files for the project, files to seed the database, or other files used by the developer.  
+```
 
-## Endpoints 
+## Endpoints
 
-### Messages  
+### Messages
+
+```txt
     - GET /messages: Get all messages  
     - POST /messages: Create a new message  
     - GET /messages/:id: Get a specific message by id  
     - PUT /messages/:id: Update a specific message by id  
     - DELETE /messages/:id: Delete a specific message by id  
-
+``
 ### Comments  
+
+```txt
     - GET /comments: Get all comments  
     - POST /comments: Create a new comment  
     - GET /comments/:id: Get a specific comment by id  
     - PUT /comments/:id: Update a specific comment by id  
     - DELETE /comments/:id: Delete a specific comment by id  
+```
 
 ## Data Models
 
 ### Message  
+
+```txt
      userName: String  
      userProfileImage: String  
      imageUrl: String  
@@ -74,6 +87,7 @@ Elements of both functional programming and object-oriented programming are used
      likes: Number  
      createdDate: String  
      comments: Number  
+```
 
 ##### Sample Message Document
 
@@ -89,12 +103,15 @@ Elements of both functional programming and object-oriented programming are used
  }
 ```
 
-### Comment 
+### Comment
+
+```txt
      messageId: String  
      userName: String  
      userProfileImage: String  
      text: String  
      createdDate: String  
+```
 
 #### Sample Comment Document  
 
@@ -124,7 +141,7 @@ Run the following code in your terminal to download the code:
 
 **Step 3: Configure the application**
 
-Create a .env file in the root directory and add a MONGODB_URI variable with the link to your MongoDB database. Add the PORT as well.
+Create a .env file in the root directory and add a `MONGODB_URI` variable with the link to your MongoDB database. Add the `PORT` as well.
 
 
 **Step 4: Start the application**
@@ -137,7 +154,7 @@ The app will now be running at <http://localhost:3001> by default.
 
 **Step 5: Seed the Database**
 
-You can seed the database with some initial data by sending a GET request to http://localhost:3001/seed
+You can seed the database with some initial data by sending a GET request to `http://localhost:3001/seed`
 
 ## API Functionality
 
@@ -148,7 +165,7 @@ You can seed the database with some initial data by sending a GET request to htt
 
 ## Known Issues
 
-- Unused and untested endpoints for the comment routes getAllCommentsByMessage and getLLCommentsByUser
+- Unused and untested endpoints for the comment routes `getAllCommentsByMessage` and `getLLCommentsByUser`
 
 ## Roadmap
 
