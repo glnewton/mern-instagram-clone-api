@@ -35,7 +35,9 @@ Elements of both functional programming and object-oriented programming are used
 3. It includes routes for getting, creating, updating, and deleting messages and comments.
 4. The API uses CORS to allow the front-end to access the API.
 
-### Files & Directories 
+### Files & Directories
+
+![File Structure](.docs/fileStructure.jpg)
 
 - server.js - the main file for the express app, where the express app is created and the middleware and routes are set up.  
 - package.json - lists the packages (including express) that the project depends on, as well as scripts for running the app and testing.  
