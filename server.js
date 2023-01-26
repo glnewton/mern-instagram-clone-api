@@ -43,6 +43,7 @@ app.use('/messages', messagesController);
 app.use('/comments', commentsController);
 
 // Seeding the db
+
 app.get('/seed', async (req, res) => {
     await Messages.deleteMany({});
     await Messages.insertMany(messageSeedData);

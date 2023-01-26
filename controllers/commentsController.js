@@ -1,6 +1,3 @@
-//Create a comments controller file for the comments routes
-//
-// Path: mern-instagram-clone-api\controllers\commentsController.js
 const express = require('express');
 const router = express.Router();
 const Comment = require('../models/Comment.js');
@@ -66,25 +63,6 @@ router.get('/message/:messageId', (req, res) => {
         res.json(foundComments);
     });
 });
-
-// Create the endpoint in the backend for getAllCommentsByUser with mongoose
-// router.get('/comments/user/:userId', async (req, res) => {
-//     try {
-//         const foundComments = await Comment.find({ user: req.params.userId });
-//         res.json(foundComments);
-//     } catch (error) {
-//         res.status(500).json({ error: error.message });
-//     }
-// });
-
-// router.get('/comments/user/:userId', async (req, res) => {
-//     try {
-//         const foundComments = await Comment.find({ user: req.params.userId });
-//         res.json(foundComments);
-//     } catch (error) {
-//         res.status(500).json({ error: error.message });
-//     }
-// });
 
 
 module.exports = router;
