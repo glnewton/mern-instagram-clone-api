@@ -1,9 +1,10 @@
 {
   "name": "mern-instagram-clone-api",
   "version": "1.0.0",
-  "description": "This is the back-end API server for my MERN stack instagram Clone. It currently has models and routes/controllers for messages and comments. ",
+  "description": "This is the back-end API server for my MERN stack instagram Clone. It currently has models and routes/controllers for messages and comments.",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
