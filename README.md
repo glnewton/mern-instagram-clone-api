@@ -4,11 +4,11 @@
 
 This is the back-end API for a MERN stack Instagram Clone. It uses Node with Express as the server, Mongoose as the ORM, and MongoDB as the database. The API is responsible for handling user-generated content, such as messages and comments. It is designed to be used in conjunction with a React front-end. It has two main models, Message and Comment, which are used to interact with the MongoDB.
 
-[GitHub Repository](https://github.com/glnewton/mern-instagram-clone-api)
+[API Repository](https://github.com/glnewton/mern-instagram-clone-api)
 
 [Live API](https://mern-instagram-clone-api.onrender.com)
 
-[GitHub Repository](https://github.com/glnewton/mern-instagram-clone-ui)
+[UI Repository](https://github.com/glnewton/mern-instagram-clone-ui)
 
 [Live Site](https://mern-instagram-clone-ui.onrender.com)
 
