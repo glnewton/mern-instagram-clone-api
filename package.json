@@ -1,7 +1,7 @@
 {
   "name": "mern-instagram-clone-api",
   "version": "1.0.0",
-  "description": "This is the back-end API server for my MERN stack instagram Clone. It currently has models and routes/controllers for messages and comments.",
+  "description": "This is the back-end API for a MERN stack Instagram Clone. It uses Node with Express as the server, Mongoose as the ORM, and MongoDB as the database. The API is responsible for handling user-generated content, such as messages and comments. It is designed to be used in conjunction with a React front-end. It has two main models, Message and Comment, which are used to interact with the MongoDB.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
