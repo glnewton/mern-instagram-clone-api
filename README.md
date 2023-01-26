@@ -36,7 +36,7 @@ Elements of both functional programming and object-oriented programming are used
 4. The API uses CORS to allow the front-end to access the API.
 
 
-### Files & Directories (***UPDATE ME***)
+### Files & Directories 
 
 - server.js - the main file for the express app, where the express app is created and the middleware and routes are set up.  
 - package.json - lists the packages (including express) that the project depends on, as well as scripts for running the app and testing.  
@@ -47,21 +47,21 @@ Elements of both functional programming and object-oriented programming are used
 - docs/ - contains documentation files for the project, iscreenshots, requirements and other files used by the developer such as an API reference or user guide.  
 - utilities/ - contains utility files for the project, files to seed the database, or other files used by the developer.  
 
-## Endpoints (***UPDATE ME***)
+## Endpoints 
 
-Messages  
-    GET /messages: Get all messages  
-    POST /messages: Create a new message  
-    GET /messages/:id: Get a specific message by id  
-    PUT /messages/:id: Update a specific message by id  
-    DELETE /messages/:id: Delete a specific message by id  
+### Messages  
+    - GET /messages: Get all messages  
+    - POST /messages: Create a new message  
+    - GET /messages/:id: Get a specific message by id  
+    - PUT /messages/:id: Update a specific message by id  
+    - DELETE /messages/:id: Delete a specific message by id  
 
-Comments  
-    GET /comments: Get all comments  
-    POST /comments: Create a new comment  
-    GET /comments/:id: Get a specific comment by id  
-    PUT /comments/:id: Update a specific comment by id  
-    DELETE /comments/:id: Delete a specific comment by id  
+### Comments  
+    - GET /comments: Get all comments  
+    - POST /comments: Create a new comment  
+    - GET /comments/:id: Get a specific comment by id  
+    - PUT /comments/:id: Update a specific comment by id  
+    - DELETE /comments/:id: Delete a specific comment by id  
 
 ## Data Models
 
@@ -87,6 +87,7 @@ Comments
      "comments": 0
  }
 ```
+
 ### Comment  
      messageId: String  
      userName: String  
@@ -139,7 +140,7 @@ You can seed the database with some initial data by sending a GET request to htt
 
 ## API Functionality
 
-1. API can performa basic CRUD operations for MESSAGES and COMMENTS.
+1. API can perform basic CRUD operations for MESSAGES and COMMENTS.
 2. All changes persist whether local or on the deployed site.
 3. API is deployed on Render.
 4. API will only accept whitelisted domains.
