@@ -48,8 +48,8 @@ app.use('/comments', commentsController);
 app.get('/seed', async (req, res) => {
     await Messages.deleteMany({});
     await Messages.insertMany(messageSeedData);
-    await Comments.deleteMany({});
-    await Comments.insertMany(commentSeedData);
+    // await Comments.deleteMany({});
+    // await Comments.insertMany(commentSeedData);
     res.send('done!');
   });
 

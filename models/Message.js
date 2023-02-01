@@ -1,3 +1,5 @@
+// import moment from 'moment';
+
 const mongoose = require('mongoose');
 
 const messageSchema = new mongoose.Schema({
@@ -5,9 +7,9 @@ const messageSchema = new mongoose.Schema({
     userProfileImage: String,
     imageUrl: String,
     message: String,
-    likes: Number,
     createdDate: String,
-    comments: Number
+    likes: { type: Number, default: 0},
+    comments: { type: Number, default: 0}
 });
 
 const Message = mongoose.model('Message', messageSchema);
