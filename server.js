@@ -1,7 +1,10 @@
 const express = require('express')
 require('dotenv').config()
+
 const mongoose = require('mongoose')
 const db = mongoose.connection
+const { MONGODB_USER, MONGODB_PASSWORD, MONGODB_IP, MONGODB_PORT } = require('./config/config')
+
 const Messages = require('./models/Message')
 const Comments = require('./models/Comment')
 const messageSeedData = require('./utilities/messageSeedData')
@@ -10,7 +13,7 @@ const cors = require('cors')
 //Environment Variables
 
 const PORT = process.env.PORT || 3001;
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_IP}:${MONGODB_PORT}/?authSource=admin';
 const app = express();
 
 //Coonnection to MongoDB
@@ -18,7 +21,7 @@ mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true, 
     useUnifiedTopology: true });
 mongoose.connection.once('open', () => {
-    console.log('connected to mongo');
+    console.log('Connected to MongoDB');
 });
 
 db.on('error', (error) => console.log(error.message + ' is Mongod not running?'));
@@ -45,13 +48,13 @@ app.use('/comments', commentsController);
 
 // Seeding the db
 
-// app.get('/seed', async (req, res) => {
-//     // await Messages.deleteMany({});
-//     // await Messages.insertMany(messageSeedData);
-//     // await Comments.deleteMany({});
-//     // await Comments.insertMany(commentSeedData);
-//     res.send('done!');
-//   });
+app.get('/seed', async (req, res) => {
+    await Messages.deleteMany({});
+    await Messages.insertMany(messageSeedData);
+    // await Comments.deleteMany({});
+    // await Comments.insertMany(commentSeedData);
+    res.send('done!');
+  });
 
 app.listen(PORT, () => {
     console.log('Server active on port: ', PORT)
