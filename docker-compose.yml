@@ -1,26 +1,17 @@
-# version: '3'
-# services:
-#   api:
-#     build: .
-#     ports:
-#       - 5000:5000
-#     volumes:
-#       - .:/app
-#       - /app/node_modules
-#     depends_on:
-#       - mongo
-#   mongo:
-#     image: mongo
-#     ports:
-#       - 27017:27017
-#     volumes:
-#       - mongo:/data/db
-#     environment:
-#       MONGO_INITDB_ROOT_USERNAME: root
-#       MONGO_INITDB_ROOT_PASSWORD: example
-
-# volumes:
-#     mongo:
-
-# # Path: mern-instagram-clone-api\package.json
-
+version: '3'
+services:
+  node-app-api:
+    build: .
+    ports:
+      - 3001:3001
+    environment:
+      - PORT=3001
+  mongo:
+    image: mongo
+    volumes:
+      - mongo-db:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=gary 
+      - MONGO_INITDB_ROOT_PASSWORD=asdfasdf
+volumes:
+  mongo-db:

@@ -45,13 +45,13 @@ app.use('/comments', commentsController);
 
 // Seeding the db
 
-app.get('/seed', async (req, res) => {
-    await Messages.deleteMany({});
-    await Messages.insertMany(messageSeedData);
-    // await Comments.deleteMany({});
-    // await Comments.insertMany(commentSeedData);
-    res.send('done!');
-  });
+// app.get('/seed', async (req, res) => {
+//     // await Messages.deleteMany({});
+//     // await Messages.insertMany(messageSeedData);
+//     // await Comments.deleteMany({});
+//     // await Comments.insertMany(commentSeedData);
+//     res.send('done!');
+//   });
 
 app.listen(PORT, () => {
     console.log('Server active on port: ', PORT)
