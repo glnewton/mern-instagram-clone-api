@@ -182,7 +182,6 @@ You can seed the database with some initial data by sending a GET request to `ht
 
 - Docker: https://www.youtube.com/watch?v=9zUHg7xjIqQ&list=PLhh92K02ZoTFwk1c1YGohqq5qzp_fAhxE&index=25
 
-
 ## Resources
 
 - Tishana TDL Express/React

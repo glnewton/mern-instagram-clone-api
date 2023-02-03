@@ -6,6 +6,8 @@ services:
       - 3001:3001
     environment:
       - PORT=3001
+    depends_on:
+      - mongo
   mongo:
     image: mongo
     volumes:
