@@ -64,7 +64,7 @@ Elements of both functional programming and object-oriented programming are used
     - GET /messages/:id: Get a specific message by id  
     - PUT /messages/:id: Update a specific message by id  
     - DELETE /messages/:id: Delete a specific message by id  
-``
+```
 ### Comments  
 
 ```txt
